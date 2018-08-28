@@ -28,6 +28,10 @@ if __name__ == "__main__":
         keywords = read_keywords("keywords.txt")
         classifier = Classification(keywords)
         classifier.classify(results[0])
-        print(classifier.get_classifications())
+        for each_obj in classifier.get_classifications():
+            for each_dict in each_obj:
+                for k,v in each_dict.items():
+                    print(k,v)
+
     end_time = time.time()
     print("Process finished in %ssecs" %((end_time - start_time)))

@@ -24,6 +24,8 @@ class PDF(object):
         pool = multiprocessing.Pool(processes=self.num_workers)
         pdfs = self.find_pdf_files()
         mp = pool.map_async(self.get_title, pdfs, callback=self.results.append)
+        pool.close()
+        pool.join()
         mp.wait()
 
     def get_results(self):

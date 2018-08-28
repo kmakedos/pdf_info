@@ -1,0 +1,21 @@
+C++
+python
+java
+javascript
+bash
+linux
+unix
+windows
+microsoft
+math
+mathematics
+physics
+computer theory
+artificial intelligence
+cryptography
+distributed
+networks
+socket
+programming
+parallel
+visual studio

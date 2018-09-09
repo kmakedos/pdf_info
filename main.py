@@ -1,5 +1,4 @@
 import sys
-import os
 import time
 
 from PDF import PDF
@@ -11,7 +10,7 @@ def read_keywords(keyword_filename):
     with open(keyword_filename, 'r') as keyword_file:
         for keyword in keyword_file:
             keyword = keyword.strip('\n')
-            keywords.append(keyword)
+            keywords.append(str.lower(keyword))
     keyword_file.close()
     return keywords
 
@@ -21,7 +20,7 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         path = sys.argv[1]
     else:
-        path = "/space/Training + Ebooks/"
+        path = "/media/kostas/Home/Ebooks-Videos/Selected Ebooks"
         pdf = PDF(path)
         pdf.extract_titles()
         results = pdf.get_results()

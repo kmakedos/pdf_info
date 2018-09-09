@@ -1,4 +1,7 @@
-C++
+c++
+gdb
+llvm
+clang
 python
 java
 javascript
@@ -19,3 +22,4 @@ socket
 programming
 parallel
 visual studio
+design patterns
